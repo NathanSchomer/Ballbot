@@ -1,0 +1,5 @@
+Compiler options:
+-pthread (for POSIX threads)
+
+Linker options
+-lm (for math libraries)

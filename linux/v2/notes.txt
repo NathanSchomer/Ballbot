@@ -1,0 +1,11 @@
+Compiler options:
+-pthread (for POSIX threads)
+
+Linker options:
+-lm (for math libraries)
+
+Pseudocode:
+- create fd based loop timer
+- configure I2C and create IMU read thread
+- configure CAN and create motor message rx thread
+- create socket handling thread
