@@ -3,12 +3,11 @@
 
 int main(int argc, char** argv) {
     imu_data heading;
+    imu_data pimu_data;
     
     imuConfig();
     
     while(1) {
-        sensorRead();          // read 9-dof sensor
+        sensorRead(*pimu_data);          // read 9-dof sensor
     }
 }
-
-
