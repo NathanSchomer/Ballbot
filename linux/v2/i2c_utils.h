@@ -12,7 +12,7 @@
 extern "C" {
 #endif
     
-#include <linux/i2c.h>
+//#include <linux/i2c.h>
 #include <linux/i2c-dev.h>
     
     void i2cOpen(void);

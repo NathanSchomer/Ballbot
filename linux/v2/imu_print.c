@@ -10,3 +10,4 @@ int main(int argc, char** argv) {
         sensorRead(&_imu_working_reg);          // read 9-dof sensor
     }
 }
+
