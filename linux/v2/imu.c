@@ -22,7 +22,7 @@
 #include <linux/i2c-dev.h>
 
 
-sem_t sem_imu_trigger; // to trigger the next run of the loop
+//sem_t sem_imu_trigger; // to trigger the next run of the loop
 pthread_t _thread_imu;
 pthread_mutex_t _imu_lock = PTHREAD_MUTEX_INITIALIZER;
 
@@ -54,7 +54,7 @@ void imuConfig(void) {
     i2cWriteSingle(CTRL_REG4_G, 0b00000000);    // continuous update, little-endian, 250dps
     i2cWriteSingle(CTRL_REG5_G, 0b00000010);    // high-pass filter disabled, output LPFed
 
-    sem_init(&sem_imu_trigger, 0, 0);
+    //sem_init(&sem_imu_trigger, 0, 0);
     pthread_create(&_thread_imu, NULL, imuUpdate, NULL);
 
 }
