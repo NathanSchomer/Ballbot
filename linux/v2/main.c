@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
     imuConfig();
     
     while(1) {
-        sensorRead(&_imu_working_reg);          // read 9-dof sensor
+        sensorRead();          // read 9-dof sensor
     }
 }
 
