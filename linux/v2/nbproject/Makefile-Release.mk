@@ -35,17 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/can_utils.o \
-	${OBJECTDIR}/controller.o \
 	${OBJECTDIR}/freeIMU.o \
 	${OBJECTDIR}/i2c_utils.o \
-	${OBJECTDIR}/imu.o \
-	${OBJECTDIR}/interface.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/main2.o \
-	${OBJECTDIR}/message.o \
-	${OBJECTDIR}/motors.o \
-	${OBJECTDIR}/tick.o
+	${OBJECTDIR}/imu.o
 
 
 # C Compiler Flags
@@ -72,16 +64,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/v2: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/v2 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/can_utils.o: can_utils.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/can_utils.o can_utils.c
-
-${OBJECTDIR}/controller.o: controller.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/controller.o controller.c
-
 ${OBJECTDIR}/freeIMU.o: freeIMU.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -96,36 +78,6 @@ ${OBJECTDIR}/imu.o: imu.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/imu.o imu.c
-
-${OBJECTDIR}/interface.o: interface.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/interface.o interface.c
-
-${OBJECTDIR}/main.o: main.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
-
-${OBJECTDIR}/main2.o: main2.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main2.o main2.c
-
-${OBJECTDIR}/message.o: message.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/message.o message.c
-
-${OBJECTDIR}/motors.o: motors.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/motors.o motors.c
-
-${OBJECTDIR}/tick.o: tick.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tick.o tick.c
 
 # Subprojects
 .build-subprojects:

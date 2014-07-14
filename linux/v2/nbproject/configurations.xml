@@ -5,18 +5,11 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
-      <itemPath>can_utils.h</itemPath>
-      <itemPath>controller.h</itemPath>
       <itemPath>freeIMU.h</itemPath>
       <itemPath>i2c_utils.h</itemPath>
       <itemPath>imu.h</itemPath>
-      <itemPath>interface.h</itemPath>
       <itemPath>l3gd20.h</itemPath>
       <itemPath>lsm303dlhc.h</itemPath>
-      <itemPath>messege.h</itemPath>
-      <itemPath>motors.h</itemPath>
-      <itemPath>robot.h</itemPath>
-      <itemPath>tick.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -26,17 +19,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>can_utils.c</itemPath>
-      <itemPath>controller.c</itemPath>
       <itemPath>freeIMU.c</itemPath>
       <itemPath>i2c_utils.c</itemPath>
       <itemPath>imu.c</itemPath>
-      <itemPath>interface.c</itemPath>
-      <itemPath>main.c</itemPath>
-      <itemPath>main2.c</itemPath>
-      <itemPath>message.c</itemPath>
-      <itemPath>motors.c</itemPath>
-      <itemPath>tick.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -72,14 +57,6 @@
       </item>
       <item path="ballbot_pseudo" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="can_utils.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="can_utils.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="controller.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="controller.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="freeIMU.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="freeIMU.h" ex="false" tool="3" flavor2="0">
@@ -92,33 +69,11 @@
       </item>
       <item path="imu.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="interface.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="interface.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="l3gd20.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lsm303dlhc.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="main2.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="message.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="messege.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="motors.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="motors.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="notes.txt" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="robot.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="tick.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="tick.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -145,14 +100,6 @@
       </item>
       <item path="ballbot_pseudo" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="can_utils.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="can_utils.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="controller.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="controller.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="freeIMU.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="freeIMU.h" ex="false" tool="3" flavor2="0">
@@ -165,33 +112,11 @@
       </item>
       <item path="imu.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="interface.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="interface.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="l3gd20.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lsm303dlhc.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="main2.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="message.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="messege.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="motors.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="motors.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="notes.txt" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="robot.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="tick.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="tick.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
