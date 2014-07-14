@@ -73,53 +73,53 @@ LDLIBSOPTIONS=
 
 ${OBJECTDIR}/can_utils.o: can_utils.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/can_utils.o can_utils.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/can_utils.o can_utils.c
 
 ${OBJECTDIR}/controller.o: controller.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/controller.o controller.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/controller.o controller.c
 
 ${OBJECTDIR}/freeIMU.o: freeIMU.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/freeIMU.o freeIMU.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/freeIMU.o freeIMU.c
 
 ${OBJECTDIR}/i2c_utils.o: i2c_utils.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/i2c_utils.o i2c_utils.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/i2c_utils.o i2c_utils.c
 
 ${OBJECTDIR}/imu.o: imu.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/imu.o imu.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/imu.o imu.c
 
 ${OBJECTDIR}/interface.o: interface.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/interface.o interface.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/interface.o interface.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
 ${OBJECTDIR}/message.o: message.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/message.o message.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/message.o message.c
 
 ${OBJECTDIR}/motors.o: motors.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/motors.o motors.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/motors.o motors.c
 
 ${OBJECTDIR}/tick.o: tick.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -pthread -MMD -MP -MF $@.d -o ${OBJECTDIR}/tick.o tick.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tick.o tick.c
 
 # Subprojects
 .build-subprojects:

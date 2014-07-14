@@ -8,20 +8,20 @@ CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
-CND_ARTIFACT_DIR_Debug=/home/root/ballbot
-CND_ARTIFACT_NAME_Debug=test.exe
-CND_ARTIFACT_PATH_Debug=/home/root/ballbot/test.exe
+CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
+CND_ARTIFACT_NAME_Debug=helloworld
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/helloworld
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=v1.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/v1.tar
+CND_PACKAGE_NAME_Debug=helloworld.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/helloworld.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
-CND_ARTIFACT_NAME_Release=v1
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/v1
+CND_ARTIFACT_NAME_Release=helloworld
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/helloworld
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Release=v1.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/v1.tar
+CND_PACKAGE_NAME_Release=helloworld.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/helloworld.tar
 #
 # include compiler specific variables
 #
