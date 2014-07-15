@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/controller.o \
 	${OBJECTDIR}/freeIMU.o \
 	${OBJECTDIR}/i2c_utils.o \
 	${OBJECTDIR}/imu.o \
@@ -65,6 +66,11 @@ LDLIBSOPTIONS=
 /home/root/ballbot/test.exe: ${OBJECTFILES}
 	${MKDIR} -p /home/root/ballbot
 	${LINK.c} -o /home/root/ballbot/test.exe ${OBJECTFILES} ${LDLIBSOPTIONS} -lm
+
+${OBJECTDIR}/controller.o: controller.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/controller.o controller.c
 
 ${OBJECTDIR}/freeIMU.o: freeIMU.c 
 	${MKDIR} -p ${OBJECTDIR}

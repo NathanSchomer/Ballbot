@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/controller.o \
 	${OBJECTDIR}/freeIMU.o \
 	${OBJECTDIR}/i2c_utils.o \
 	${OBJECTDIR}/imu.o \
@@ -65,6 +66,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/v2: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/v2 ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/controller.o: controller.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/controller.o controller.c
 
 ${OBJECTDIR}/freeIMU.o: freeIMU.c 
 	${MKDIR} -p ${OBJECTDIR}

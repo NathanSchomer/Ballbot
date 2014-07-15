@@ -69,7 +69,6 @@ void imuGetData(imu_data *pimu_data) {
     if (imu_update_missed) {
         imu_missed_counter++;
         printf("Missed IMU update %d\n", imu_missed_counter);
-        sensorRead(&pimu_data);          // read 9-dof sensor
     } else {
         pthread_mutex_lock(&_imu_lock);
         memcpy(pimu_data, &_imu_working_reg, sizeof _imu_working_reg);

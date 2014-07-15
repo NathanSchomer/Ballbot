@@ -2,17 +2,53 @@
 #include "lsm303dlhc.h"
 #include "tick.h"
 #include "robot.h"
+#include "controller.h"
 
 int main(int argc, char** argv) {
     
     int loop_timer;
-    imu_data pimu_data;
+    imu_data heading;
+    
+    state_vector state_x, state_y;
+    float force_x, force_y;
+    float mass = 1;
+    
+    int32_t mot_vel[3];                         // motor velocity registers (encoder ticks/sec)
+    float ball_vel[3];                          // x, y, and theta velocities of ball
+    
+    mot_vel[0] = 0;
+    mot_vel[1] = 0;
+    mot_vel[2] = 0;
     
     imuConfig();
     loop_timer = makeTimer(LOOP_FREQ);
     
     while(1) {
-        sensorRead(&pimu_data);          // read 9-dof sensor   
+        sensorRead(&heading);          // read 9-dof sensor
+        
+        state_x.angle = heading.rpy[0];
+        state_x.angle_dot = heading.gyro[0] * 180 / PI;
+        state_x.pos += (ball_vel[0] * LOOP_PERIOD);
+        state_x.pos_dot = ball_vel[0];
+        
+        state_y.angle = heading.rpy[1];
+        state_y.angle_dot = heading.gyro[1] * 180 / PI;
+        state_y.pos += (ball_vel[1] * LOOP_PERIOD);
+        state_y.pos_dot = ball_vel[1];
+        
+        force_x = gain.k[0]*state_x.angle + gain.k[1]*state_x.angle_dot + gain.k[2]*state_x.pos + gain.k[3]*state_x.pos_dot;
+        force_y = gain.k[0]*state_y.angle + gain.k[1]*state_y.angle_dot + gain.k[2]*state_y.pos + gain.k[3]*state_y.pos_dot;
+        
+        ball_vel[0] += (force_x / mass) * LOOP_PERIOD;
+        ball_vel[1] += (force_y / mass) * LOOP_PERIOD;
+        ball_vel[2] = 0;
+        
+        fprintf();
+        
+         ballIK(ball_vel, mot_vel);       // calculate motor velocities from IK function
+         
+         /* !!!!!  SET MOTOR VELOCITIES HERE !!!!! */
+        
         waitOnTimer(loop_timer);         // wait for next timer tick
     }
 }

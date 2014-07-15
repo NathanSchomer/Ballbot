@@ -90,9 +90,9 @@ void sensorRead(imu_data *pimu_data) {
     pimu_data->gyro[1] = raw.as_int16[1] * GYRO_RES;
     pimu_data->gyro[2] = raw.as_int16[2] * GYRO_RES;
 
-    printf("IMU data: \t%.3f\t%.3f\t%.3f", pimu_data->accel[0], pimu_data->accel[1], pimu_data->accel[2]);
-    printf("\t\t%.3f\t%.3f\t%.3f", pimu_data->mag[0], pimu_data->mag[1], pimu_data->mag[2]);
-    printf("\t\t%.3f\t%.3f\t%.3f\n", pimu_data->gyro[0], pimu_data->gyro[1], pimu_data->gyro[2]);
+    //printf("IMU data: \t%.3f\t%.3f\t%.3f", pimu_data->accel[0], pimu_data->accel[1], pimu_data->accel[2]);
+    //printf("\t\t%.3f\t%.3f\t%.3f", pimu_data->mag[0], pimu_data->mag[1], pimu_data->mag[2]);
+    //printf("\t\t%.3f\t%.3f\t%.3f\n", pimu_data->gyro[0], pimu_data->gyro[1], pimu_data->gyro[2]);
 
 }
 
