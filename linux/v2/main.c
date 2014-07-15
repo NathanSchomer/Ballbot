@@ -8,6 +8,6 @@ int main(int argc, char** argv) {
     imuConfig();
     
     while(1) {
-        sensorRead(*pimu_data);          // read 9-dof sensor
+        sensorRead(&pimu_data);          // read 9-dof sensor
     }
 }
