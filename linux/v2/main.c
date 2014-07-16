@@ -26,6 +26,7 @@ int main(int argc, char** argv) {
     
     while(1) {
         sensorRead(&heading);          // read 9-dof sensor
+        AHRSupdate(&heading);          // call AHRS update routine
         getYawPitchRoll(&heading);     // return RPY representation
         
         state_x.angle = heading.rpy[0];
