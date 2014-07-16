@@ -3,6 +3,7 @@
 #include "tick.h"
 #include "robot.h"
 #include "controller.h"
+#include "freeIMU.h"
 
 int main(int argc, char** argv) {
     
@@ -25,6 +26,7 @@ int main(int argc, char** argv) {
     
     while(1) {
         sensorRead(&heading);          // read 9-dof sensor
+        getYawPitchRoll(&heading);     // return RPY representation
         
         state_x.angle = heading.rpy[0];
         state_x.angle_dot = heading.gyro[0] * 180 / PI;
@@ -43,7 +45,7 @@ int main(int argc, char** argv) {
         ball_vel[1] += (force_y / mass) * LOOP_PERIOD;
         ball_vel[2] = 0;
         
-        fprintf();
+        printf("heading.rpy  =   %f \n",heading.rpy[0]);
         
          ballIK(ball_vel, mot_vel);       // calculate motor velocities from IK function
          

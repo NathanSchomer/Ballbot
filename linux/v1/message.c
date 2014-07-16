@@ -100,6 +100,5 @@ void getLog(sockMsg* pRecMsg, sockMsg* pReplyMsg) {
     
 //    printf("Buffer being dumped: %i\n", active);
 //    printf("Logged %i bytes. \n", length);
-//    printf("Buffer filled to: %i\n\n", dataLog.top[active]);
-    
+//    printf("Buffer filled to: %i\n\n", dataLog.top[active]);   
 }
