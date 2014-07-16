@@ -4,6 +4,7 @@
 #include "robot.h"
 #include "controller.h"
 #include "freeIMU.h"
+#include "stdio.h"
 
 int main(int argc, char** argv) {
     
