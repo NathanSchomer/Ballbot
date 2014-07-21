@@ -54,7 +54,7 @@ int main(int argc, char** argv) {
         ballIK(ball_vel, mot_vel);       // calculate motor velocities from IK function
         */ 
         
-        message.motor = 1;
+        message.motor = 1.0;
         message.velocity = 100;
         
         motorVelocitySet(&message);

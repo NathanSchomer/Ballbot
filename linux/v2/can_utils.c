@@ -61,8 +61,6 @@ void canWrite(can_buffer* pb) {
     // update the "can_id" portion of the struct
     //pb->frame.can_id = (pb->IID & 0x1f) << 6 | ((pb->source & 0x07) << 3) | (pb->dest & 0x07);
     
-    pb->
-    
     // write can_frame to socket
     write(_can_socket, &(pb->frame), sizeof (struct can_frame));
 

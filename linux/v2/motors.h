@@ -53,7 +53,6 @@ extern "C" {
     typedef struct {
         int32_t motor;
         float velocity;
-        struct motor_set frame;
     } motor_set;
     
     void motorConfig(void);
