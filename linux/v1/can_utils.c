@@ -10,12 +10,12 @@
 
 #include "robot.h"
 
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
+//#include <string.h>
  
-#include <net/if.h>
+//#include <net/if.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/ioctl.h>

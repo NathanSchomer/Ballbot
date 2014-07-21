@@ -35,11 +35,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/can_utils.o \
 	${OBJECTDIR}/controller.o \
 	${OBJECTDIR}/freeIMU.o \
 	${OBJECTDIR}/i2c_utils.o \
 	${OBJECTDIR}/imu.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/motors.o \
 	${OBJECTDIR}/tick.o
 
 
@@ -67,6 +69,11 @@ LDLIBSOPTIONS=
 	${MKDIR} -p /home/root/ballbot
 	${LINK.c} -o /home/root/ballbot/test.exe ${OBJECTFILES} ${LDLIBSOPTIONS} -lm
 
+${OBJECTDIR}/can_utils.o: can_utils.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/can_utils.o can_utils.c
+
 ${OBJECTDIR}/controller.o: controller.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -91,6 +98,11 @@ ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/motors.o: motors.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/motors.o motors.c
 
 ${OBJECTDIR}/tick.o: tick.c 
 	${MKDIR} -p ${OBJECTDIR}

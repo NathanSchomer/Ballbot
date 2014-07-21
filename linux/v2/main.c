@@ -5,11 +5,13 @@
 #include "controller.h"
 #include "freeIMU.h"
 #include "stdio.h"
+#include "motors.h"
 
 int main(int argc, char** argv) {
     
     int loop_timer;
     imu_data heading;
+    motor_set message;
     
     state_vector state_x, state_y;
     float force_x, force_y;
@@ -26,7 +28,7 @@ int main(int argc, char** argv) {
     loop_timer = makeTimer(LOOP_FREQ);
     
     while(1) {
-        sensorRead(&heading);          // read 9-dof sensor
+        /*sensorRead(&heading);          // read 9-dof sensor
         AHRSupdate(&heading);          // call AHRS update routine
         getYawPitchRoll(&heading);     // return RPY representation
         
@@ -49,9 +51,13 @@ int main(int argc, char** argv) {
         
         printf("heading.rpy  =   %f \n",heading.rpy[0]);
         
-         ballIK(ball_vel, mot_vel);       // calculate motor velocities from IK function
-         
-         /* !!!!!  SET MOTOR VELOCITIES HERE !!!!! */
+        ballIK(ball_vel, mot_vel);       // calculate motor velocities from IK function
+        */ 
+        
+        message.motor = 1;
+        message.velocity = 100;
+        
+        motorVelocitySet(&message);
         
         waitOnTimer(loop_timer);         // wait for next timer tick
     }
