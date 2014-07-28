@@ -6,6 +6,8 @@
 #include "freeIMU.h"
 #include "stdio.h"
 #include "motors.h"
+#include "can_utils.h"
+
 
 int main(int argc, char** argv) {
     
@@ -52,12 +54,21 @@ int main(int argc, char** argv) {
         printf("heading.rpy  =   %f \n",heading.rpy[0]);
         
         ballIK(ball_vel, mot_vel);       // calculate motor velocities from IK function
-        */ 
+        */
         
-        message.motor = 1.0;
-        message.velocity = 100;
+        //message.motor = 1.0;
+        //message.velocity = 100;
+        //motorVelocitySet(&message);
         
-        motorVelocitySet(&message);
+        canOpen();
+        
+        can_buffer can_msg;
+        
+        can_msg.cmd = ROL;
+        can_msg.motor = 1;
+        can_msg.val = 200;
+        
+        canWrite(&can_msg);
         
         waitOnTimer(loop_timer);         // wait for next timer tick
     }

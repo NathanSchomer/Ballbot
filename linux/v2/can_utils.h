@@ -17,6 +17,7 @@ extern "C" {
         char type;     //Type Number    (1 byte)
         char motor;    //Motor or Bank number   (1 byte)
         char val;      //Value (MSB first!)  (4 bytes)
+        struct can_frame frame;
     } can_buffer;
     
     char canOpen(void);

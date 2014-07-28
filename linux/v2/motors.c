@@ -15,13 +15,13 @@ void motorConfig(void) {
     canOpen();
 }
 
-void motorVelocitySet(motor_set* motor) {
+void motorVelocitySet(motorMsg* motor) {
     can_buffer can_msg;
     
     if(motor->velocity < 0){
         can_msg.cmd = ROL;
     }
-    else if(motor->frame >= 0){
+    else if(motor->velocity >= 0){
         can_msg.cmd = ROR;
     }
     
