@@ -11,14 +11,21 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+    
+    typedef struct {
+        char motor;
+        int status;
+        char cmd;
+        char val;
+    } response;
 
     typedef struct {
         char cmd;      //Command number (1 byte)
         char type;     //Type Number    (1 byte)
         char motor;    //Motor or Bank number   (1 byte)
         char val;      //Value (MSB first!)  (4 bytes)
-        struct can_frame frame;
-    } can_buffer;
+        //struct response;
+    } can_bufer;
     
     char canOpen(void);
     char canClose(void);

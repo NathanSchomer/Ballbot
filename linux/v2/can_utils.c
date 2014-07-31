@@ -62,13 +62,13 @@ void canWrite(can_buffer* pb) {
     //pb->frame.can_id = (pb->IID & 0x1f) << 6 | ((pb->source & 0x07) << 3) | (pb->dest & 0x07);
     
     // write can_frame to socket
-    write(_can_socket, &(pb->frame), sizeof (struct can_frame));
+    //write(_can_socket, &(pb->frame), sizeof (struct can_frame));
 
 }
 
 void canRead(can_buffer* pb) {
     
-    read(_can_socket, &(pb->frame), sizeof (struct can_frame));
+    //read(_can_socket, &(pb->frame), sizeof (struct can_frame));
     
     //pb->IID = (pb->frame.can_id >> 6) & 0x1f;
     //pb->source = (pb->frame.can_id >> 3) & 0x07;

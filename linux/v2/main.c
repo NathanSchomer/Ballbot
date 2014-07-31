@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     
     int loop_timer;
     imu_data heading;
-    motor_set message;
+//    motor_set message;
     
     state_vector state_x, state_y;
     float force_x, force_y;
@@ -66,7 +66,7 @@ int main(int argc, char** argv) {
         
         can_msg.cmd = ROL;
         can_msg.motor = 1;
-        can_msg.val = 200;
+        can_msg.val = 1000;
         
         canWrite(&can_msg);
         

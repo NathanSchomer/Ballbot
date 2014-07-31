@@ -58,7 +58,7 @@ extern "C" {
     void motorConfig(void);
     void *motorReadBackground(void *);
     
-    void motorVelocitySet(int32_t*);
+    void motorVelocitySet(motorMsg* motor);
     void motorEnable(int, int);
     void motorLED(int, int);
     

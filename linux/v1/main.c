@@ -96,7 +96,7 @@ int main(int argc, char** argv) {
         //gettimeofday(&t1, NULL);
         //elapsed = (t1.tv_sec - t0.tv_sec)*1000 + (t1.tv_usec - t0.tv_usec) / 1000.0f;
         //printf("Loop time: %f ms\n", elapsed);
-        
+
         waitOnTimer(loop_timer);                // wait for next timer tick
         
         //printf("Main loop %i \n", i);
