@@ -25,7 +25,7 @@ extern "C" {
         char motor;    //Motor or Bank number   (1 byte)
         char val;      //Value (MSB first!)  (4 bytes)
         //struct response;
-    } can_bufer;
+    } can_buffer;
     
     char canOpen(void);
     char canClose(void);
